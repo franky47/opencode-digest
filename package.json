@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "./run.sh",
-    "launchd:install": "cp -f com.franky47.opencode-digest.plist ~/Library/LaunchAgents/",
+    "launchd:install": "cp -f com.franky47.opencode-digest.plist ~/Library/LaunchAgents/ && sed -i '' -e \"s|\\$HOME|$HOME|g\" -e \"s|\\$WORKSPACE|$PWD|g\" ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:load": "launchctl load ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:reload": "bun run launchd:unload && bun run launchd:load"

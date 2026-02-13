@@ -7,13 +7,13 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/echo/.bun/bin/bun</string>
+        <string>$HOME/.bun/bin/bun</string>
         <string>run</string>
-        <string>/Users/echo/dev/agents/opencode-digest/run.sh</string>
+        <string>$WORKSPACE/run.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/echo/dev/agents/opencode-digest</string>
+    <string>$WORKSPACE</string>
 
     <key>EnvironmentVariables</key>
     <dict>
@@ -30,10 +30,10 @@
     </dict>
 
     <key>StandardOutPath</key>
-    <string>/Users/echo/.local/share/opencode-digest/out.log</string>
+    <string>$HOME/.local/share/opencode-digest/out.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/echo/.local/share/opencode-digest/err.log</string>
+    <string>$HOME/.local/share/opencode-digest/err.log</string>
 
     <key>RunAtLoad</key>
     <false/>
