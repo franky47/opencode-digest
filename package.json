@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "./run.sh",
-    "launchd:install": "cp -f com.47ng.opencode-digest.plist ~/Library/LaunchAgents/",
-    "launchd:load": "launchctl load ~/Library/LaunchAgents/com.47ng.opencode-digest.plist",
-    "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.47ng.opencode-digest.plist",
+    "launchd:install": "cp -f com.franky47.opencode-digest.plist ~/Library/LaunchAgents/",
+    "launchd:load": "launchctl load ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
+    "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:reload": "bun run launchd:unload && bun run launchd:load"
   },
   "devDependencies": {
