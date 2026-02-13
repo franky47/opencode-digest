@@ -4,7 +4,7 @@ description: Fetch GitHub releases for OpenCode.
 ---
 
 You can access OpenCode releases using the `gh` CLI.
-To get the bodies of all releases published in the last 24 hours:
+To get the bodies of all releases published in the last 24 hours, run the following command as-is (the whole thing):
 
 ```bash
 gh release list --repo anomalyco/opencode --json name,publishedAt | \
