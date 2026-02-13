@@ -59,13 +59,6 @@ export async function postDigest(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       blocks: [
-        {
-          type: 'header',
-          text: {
-            type: 'plain_text',
-            text: 'OpenCode Releases',
-          },
-        },
         ...releaseBlocks,
         {
           type: 'context',
