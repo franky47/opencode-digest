@@ -2,8 +2,12 @@
 
 set -e
 
+source .env
+
 prompt=$(cat <<EOF
 Use the \`releases-feed\` skill to obtain the contents of the OpenCode releases for the last 24h.
+
+If there are none, exit early.
 
 Generate a concise report of the changes in Markdown. Focus on:
 - Core changes (keep all of them)
