@@ -4,6 +4,14 @@ set -e
 
 source .env
 
+release_count=$(gh release list --repo anomalyco/opencode --json publishedAt | \
+  jq '[.[] | select(.publishedAt > (now - 86400 | todateiso8601))] | length')
+
+if [ -z "$release_count" ] || [ "$release_count" -eq 0 ]; then
+  echo "No releases in the last 24h. Exiting."
+  exit 0
+fi
+
 prompt=$(cat <<EOF
 Use the \`releases-feed\` skill to obtain the contents of the OpenCode releases for the last 24h.
 
