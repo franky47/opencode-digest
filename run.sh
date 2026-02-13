@@ -11,7 +11,7 @@ Generate a concise report of the changes in Markdown. Focus on:
 - Exclude Desktop changes entirely
 - Exclude changes related to other platforms (keep only macOS)
 - Exclude collaborators and other non-change related information
-- Include a link to the release on GitHub as the title of each release in the report: `## [v1.2.3](https://github.com/anomalyco/opencode/releases/tag/v1.2.3)`
+- Include a link to the release on GitHub as the title of each release in the report: \`## [v1.2.3](https://github.com/anomalyco/opencode/releases/tag/v1.2.3)\`
 
 Once you have that Markdown report, send it to Slack using the \`slack-notify\` tool.
 
