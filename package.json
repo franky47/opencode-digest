@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun ./src/index.ts",
+    "start": "bun ./src/main.ts",
     "launchd:install": "cp -f com.franky47.opencode-digest.plist ~/Library/LaunchAgents/ && sed -i '' -e \"s|\\$HOME|$HOME|g\" -e \"s|\\$WORKSPACE|$PWD|g\" ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:load": "launchctl load ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
     "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.franky47.opencode-digest.plist",
