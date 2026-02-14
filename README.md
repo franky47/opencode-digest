@@ -9,7 +9,6 @@ but at a regular pace, while drinking my morning tea. 🫖
 
 ## Pre-requisites
 
-- OpenCode
 - Bun
 - `gh` CLI
 - A Slack webhook URL

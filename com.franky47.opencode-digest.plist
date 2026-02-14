@@ -8,8 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>$HOME/.bun/bin/bun</string>
-        <string>run</string>
-        <string>$WORKSPACE/run.sh</string>
+        <string>start</string>
     </array>
 
     <key>WorkingDirectory</key>
