@@ -32,18 +32,22 @@ export async function postDigest(
 }
 
 function renderRelease(release: Release) {
-  const sectionBlocks = release.sections.flatMap((section) => {
-    const itemLines = section.items.join('\n')
-    return [
-      {
-        type: 'section',
-        text: {
-          type: 'mrkdwn',
-          text: section.title ? `*${section.title}*\n${itemLines}` : itemLines,
+  const sectionBlocks = release.sections
+    .flatMap((section) => {
+      const itemLines = section.items.join('\n')
+      return [
+        {
+          type: 'section',
+          text: {
+            type: 'mrkdwn',
+            text: section.title
+              ? `*${section.title}*\n${itemLines}`
+              : itemLines,
+          },
         },
-      },
-    ]
-  })
+      ]
+    })
+    .filter((block) => block.text.text.trim() !== '') // Filter out empty sections
   const releaseUrl = `https://github.com/anomalyco/opencode/releases/tag/${release.name}`
 
   return [
